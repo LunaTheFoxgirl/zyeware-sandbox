@@ -1,0 +1,11 @@
+name "zyeware-sandbox"
+description "ZyeWare sandbox application"
+authors "ZyeByte"
+copyright "Copyright © 2020, ZyeByte"
+license "proprietary"
+dependency "zyeware" path="../zyeware"
+targetPath "bin"
+targetType "executable"
+workingDirectory "res"
+
+versions "Profiling"

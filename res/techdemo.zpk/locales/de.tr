@@ -1,0 +1,24 @@
+locale "de"
+
+translations {
+    menu {
+        header "Willkommen bei ZyeWare!\nNutze die Pfeiltasten um den Cursor zu bewegen, 'Enter' um auszuwaehlen.\nDruecke 'Escape' in einer Demo um zurueckzukehren."
+        footer "Stolz nicht-gesponsort von der Google Game Engine.\nUnd irgendwann werde ich meinen Kampf gegen dich gewinnen, Unity."
+
+        currentLocale "Geladene Locale: "
+
+        asteroids "Asteroids Beispielsspiel"
+        meshView "Mesh Ansichts Demo"
+        terrain "3D Terrain Demo"
+        changeLocale "Locale aendern"
+        quit "Programm beenden"
+    }
+
+    teapotDemo {
+        header "MESH ANSICHTS DEMO\nDruecke Pfeiltasten Links und Rechts um Mesh zu aendern.\nNutze Pfeiltasten Rauf und Runter um zu zoomen.\nDruecke Q/A, W/S and E/D um die Farbe zu aendern."
+    }
+
+    terrainDemo {
+        header "3D TERRAIN DEMO\nNutze die Pfeiltasten um dich zu bewegen."
+    }
+}
