@@ -8,3 +8,4 @@ out/
 *.o
 *.lst
 *.a
+dub.selections.json
