@@ -31,16 +31,6 @@ jobs:
     - name: "Get build dependencies"
       run: |
         sudo apt install libsdl2-dev libfreetype6-dev gettext
-      
-    - name: "Clone ZyeWare"
-      uses: actions/checkout@v3
-      with:
-        repository: zyebytevt/zyeware
-        path: zyeware/
-
-    - name: "Register DUB package"
-      run: |
-        dub add-local zyeware/ "1.0.0"
 
     - name: 'Build'
       run: |
@@ -79,16 +69,6 @@ jobs:
     - uses: dlang-community/setup-dlang@4c99aa991ce7d19dd3064de0a4f2f6b2f152e2d7
       with:
         compiler: ldc-latest
-      
-    - name: "Clone ZyeWare"
-      uses: actions/checkout@v3
-      with:
-        repository: zyebytevt/zyeware
-        path: zyeware/
-
-    - name: "Register DUB package"
-      run: |
-        dub add-local zyeware/ "1.0.0"
 
     - name: 'Build'
       run: |
@@ -147,16 +127,6 @@ jobs:
         if [ -f "/usr/local/lib/libharfbuzz.a" ]; then
           sudo rm -r /usr/local/lib/libharfbuzz.a
         fi
-
-    - name: "Clone ZyeWare"
-      uses: actions/checkout@v3
-      with:
-        repository: zyebytevt/zyeware
-        path: zyeware/
-
-    - name: "Register DUB package"
-      run: |
-        dub add-local zyeware/ "1.0.0"
 
     - name: 'Build'
       env:
