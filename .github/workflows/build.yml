@@ -32,9 +32,14 @@ jobs:
       run: |
         sudo apt install libsdl2-dev libfreetype6-dev gettext
       
-    - name: "Clone dependencies & set versions"
+    - name: "Clone ZyeWare"
+      uses: actions/checkout@v3
+      with:
+        repository: zyebytevt/zyeware
+        path: zyeware/
+
+    - name: "Register DUB package"
       run: |
-        git clone https://github.com/zyebytevt/zyeware --recurse-submodules
         dub add-local zyeware/ "1.0.0"
 
     - name: 'Build'
@@ -75,9 +80,14 @@ jobs:
       with:
         compiler: ldc-latest
       
-    - name: "Clone dependencies & set versions"
+    - name: "Clone ZyeWare"
+      uses: actions/checkout@v3
+      with:
+        repository: zyebytevt/zyeware
+        path: zyeware/
+
+    - name: "Register DUB package"
       run: |
-        git clone https://github.com/zyebytevt/zyeware --recurse-submodules
         dub add-local zyeware/ "1.0.0"
 
     - name: 'Build'
@@ -138,9 +148,14 @@ jobs:
           sudo rm -r /usr/local/lib/libharfbuzz.a
         fi
 
-    - name: "Clone dependencies & set versions"
+    - name: "Clone ZyeWare"
+      uses: actions/checkout@v3
+      with:
+        repository: zyebytevt/zyeware
+        path: zyeware/
+
+    - name: "Register DUB package"
       run: |
-        git clone https://github.com/zyebytevt/zyeware --recurse-submodules
         dub add-local zyeware/ "1.0.0"
 
     - name: 'Build'
