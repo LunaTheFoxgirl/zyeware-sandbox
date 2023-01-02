@@ -32,6 +32,7 @@ protected:
     Font mFont;
     MenuBackground mBackground;
     AudioSampleSource mBackSoundSource;
+    Texture2D mLogoTexture;
 
     void processStarPattern(Duration frameTime)
     {
@@ -128,6 +129,7 @@ public:
         mFont = AssetManager.load!Font("core://fonts/internal.fnt");
         mBackSoundSource = new AudioSampleSource(null);
         mBackSoundSource.buffer = AssetManager.load!Sound("res://menu/back.wav");
+        mLogoTexture = AssetManager.load!Texture2D("core://textures/engine-logo.png");
 
         mBackground = new MenuBackground();
 
@@ -188,7 +190,10 @@ public:
         Renderer2D.begin(mUICamera.projectionMatrix, mat4.identity);
 
         mBackground.draw();
-        mMainMenu.draw(Vector2f(320, 100));
+
+        Renderer2D.drawRect(Rect2f(120.95, 60, 120.95 + 398.1, 60 + 115.2), Matrix4f.identity, Color.white, mLogoTexture);
+        
+        mMainMenu.draw(Vector2f(320, 200));
 
         Renderer2D.drawText(tr("menu.header"), mFont, Vector2f(320, 6), Color.white, Font.Alignment.center);
         Renderer2D.drawText(tr("menu.footer"), mFont, Vector2f(320, 480 - 4), Color.white, Font.Alignment.center | Font.Alignment.bottom);

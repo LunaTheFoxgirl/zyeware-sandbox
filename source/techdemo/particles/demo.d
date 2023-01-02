@@ -23,7 +23,7 @@ public:
 
     override void tick(in FrameTime frameTime)
     {
-        mParticles.create(mStarParticlesId, ZyeWare.application.window.cursorPosition, 1);
+        mParticles.emit(mStarParticlesId, ZyeWare.application.cursorPosition, 100);
         mParticles.tick(frameTime);
 
         if (InputManager.isActionJustPressed("ui_cancel"))
@@ -61,9 +61,9 @@ public:
             starType.speed.max = 300f;
             starType.lifeTime.min = seconds(1);
             starType.lifeTime.max = seconds(3);
-            //starType.color = gradient;
+            starType.color = gradient;
 
-            mStarParticlesId = mParticles.registerType(starType, 1024);
+            mStarParticlesId = mParticles.registerType(starType, 1024 * 10);
         }
     }
 }

@@ -66,6 +66,8 @@ public:
 			.addInput(new InputEventKey(KeyCode.enter))
 			.addInput(new InputEventGamepadButton(0, GamepadButton.a));
 
+		Logger.client.log(LogLevel.trace, "%s", uuid);
+
         changeState(new DemoMenu(this));
 	}
 }

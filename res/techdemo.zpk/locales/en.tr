@@ -2,8 +2,8 @@ locale "en"
 
 translations {
     menu {
-        header "Welcome to ZyeWare!\nPress arrow keys to move cursor, 'return' to select.\nInside a demo, press 'escape' to return here."
-        footer "Please note that this application is used for internal testing\nas well as providing an example of what ZyeWare is capable of.\nThank you so much for giving my engine your time of the day."
+        header "Welcome!\nPress arrow keys to move cursor, 'return' to select.\nInside a demo, press 'escape' to return here."
+        footer "Please note that this application is used for testing\nas well as providing an example of what ZyeWare is capable of.\nThank you so much for giving my engine your time of the day."
 
         currentLocale "Current locale: "
 

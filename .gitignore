@@ -2,7 +2,7 @@
 docs.json
 __dummy.html
 docs/
-bin/
+out/
 .vscode
 *.exe
 *.o

@@ -33,8 +33,7 @@ public:
                 application.pushState(new CreepsPlayState(application));
             else if (InputManager.isActionJustPressed("ui_cancel"))
             {
-                ZyeWare.application.window.size = Vector2i(640, 480);
-                ZyeWare.application.framebufferSize = Vector2ui(640, 480);
+                ZyeWare.application.resize(Vector2i(640, 480));
                 application.popState();
             }
         }
@@ -62,8 +61,7 @@ public:
             mCamera = new OrthographicCamera(0, 480, 720, 0);
             mFont = AssetManager.load!Font("core://fonts/internal.fnt");
 
-            ZyeWare.application.window.size = screenSize;
-            ZyeWare.application.framebufferSize = Vector2ui(screenSize.x, screenSize.y);
+            ZyeWare.application.resize(screenSize);
         }
 
         mIgnoreInputFrames = 5;
